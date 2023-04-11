@@ -36,3 +36,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+## Generate Server-API endpoints in the front-end using axios
+- Run the following commands from with the the ``nswag`` folder 
+
+```bash
+npx @openapitools/openapi-generator-cli generate -i ./dms-endpoints/ego-swagger.json -g typescript-axios -o  "{{YOUR_LOCAL_PATH}}\overture-client-react\src\services\ego-api" --skip-validate-spec
+# or
+npx @openapitools/openapi-generator-cli generate -i ./dms-endpoints/maestro-swagger.json -g typescript-axios -o  "{{YOUR_LOCAL_PATH}}\overture-client-react\src\services\maestro-api" --skip-validate-spec
+# or
+npx @openapitools/openapi-generator-cli generate -i ./dms-endpoints/song-swagger.json -g typescript-axios -o  "{{YOUR_LOCAL_PATH}}\overture-client-react\src\services\song-api" --skip-validate-spec
+```
